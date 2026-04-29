@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  background-color: #f0f0f0;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+
+table {
+  margin: 20px auto;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+p {
+  width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+
+ul {
+  width: 70%;
+  margin: auto;
+}
