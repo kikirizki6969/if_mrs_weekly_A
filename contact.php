@@ -10,18 +10,17 @@
     <hr>
     <table border="1" cellspacing="0" cellpadding="15px">
         <tr>
-            <td> <a href="index.html">Home</a>
+            <td> <a href="index.php">Home</a>
             </td>
 
-            <td> <a href="profile.html">Profile</a>
+            <td> <a href="profile.php">Profile</a>
             </td>
 
-            <td> <a href="contact.html">Contact</a>
+            <td> <a href="contact.php">Contact</a>
             </td>
 
-            <td> <a href="mahasiswa.html">data mahasiswa</a>
+            <td> <a href="mahasiswa.php">data mahasiswa</a>
             </td>
-            
         </tr>
     </table>
     

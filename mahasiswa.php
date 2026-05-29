@@ -10,45 +10,45 @@
     <hr>
     <table border="1" cellspacing="0" cellpadding="15px">
         <tr>
-            <td> <a href="index.html">Home</a>
+            <td> <a href="index.php">Home</a>
             </td>
 
-            <td> <a href="profile.html">Profile</a>
+            <td> <a href="profile.php">Profile</a>
             </td>
 
-            <td> <a href="contact.html">Contact</a>
+            <td> <a href="contact.php">Contact</a>
             </td>
 
-            <td> <a href="mahasiswa.html">data mahasiswa</a>
+            <td> <a href="mahasiswa.php">data mahasiswa</a>
             </td>
          <tr>
     <table>
         <h2>Data Mahasiswa</h2>
-        <a href="inputdata.html">
+        <a href="inputdata.php">
             <button>Tambah data</button>
         
         <table border="1" cellpadding="spx">
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">Nama</th>
-            <th rowspan="2">Nim</th>
-            <th rowspan="2">Foto</th>
-            <th colspan="3">Nilai</th>
+            <th >No</th>
+            <th >Nama</th>
+            <th >Nim</th>
+            <th >Jurusan</th>
+            <th >Email</th>
+            <th>NO. Hp</th>
+            <th>Foto</th>
+            <th>Aksi</th>
         </tr>
 
-        <tr>
-            <th>uts</th>
-            <th>uas</th>
-            <th>tugas</th>
-        </tr>
+
         <tr>
             <td align="center">1</td>
             <td>M Ula Irsyad</td>
-            <td>13182420013</td>
-            <td><img src="assets/images/Foto.webp" width="70 px"></td>
-            <td align="center">80</td>
-            <td align="center">95</td>
-            <td align="center">60</td>   
+            <td align="center">13182420013</td>
+            <td align="center">Informatika</td>
+            <td align="center">ulacsm@gmail.com</td>
+            <td align="center">08927642289</td>
+            <td align="center"><img src="assets/images/Saga.webp" width="70 px"></td>  
+            <td><a href="editdata.php"><button>EDIT</button></a> <a href="deletedata.php"><button>DELETE</button></a></td> 
         </tr>
 
     </table>
@@ -63,7 +63,7 @@
 
         <tr>
             <th>2,1</th>
-            <th rowspan="2" colspan="2" align="center">?</th>
+            <th  colspan="2" align="center">?</th>
             <th>2,4</th>
         </tr>
 

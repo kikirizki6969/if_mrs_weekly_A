@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Tambah data mahasiswa</h2>
-     <form action="mahasiswa.html" method="post">
+     <form action="mahasiswa.php" method="post">
         <table cellpadding="5px">
     
             <tr>
