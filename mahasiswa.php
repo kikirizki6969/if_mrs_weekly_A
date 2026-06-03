@@ -1,3 +1,38 @@
+<?php
+
+    $koneksi = mysqli_connect("localhost", "root", "root", "ifrizkiweekly");
+
+    //if($koneksi)
+    //{
+    //    echo "Berhasil Konek";
+    //}
+
+
+    $query = "SELECT * FROM mahasiswa";
+
+    $result = mysqli_query($koneksi, $query);
+
+    //// ambil data (fetch) mahasiswa dari lemari (result)
+
+
+    // ada 4 cara 
+    //-----------------------
+
+    //// mysqli_fetch_row
+    //// mysqli_fetch_assoc
+    //// mysqli_fetch_object
+    //// mysqli_fetch_array
+    
+    //while ($mhs = mysqli_fetch_assoc($result));
+    //{
+    //    var_dump($mhs);
+    //}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,48 +73,28 @@
             <th>Foto</th>
             <th>Aksi</th>
         </tr>
-
-
+        <?php 
+            $i = 1;
+            while($mhs = mysqli_fetch_assoc($result));
+            {
+        ?>
         <tr>
-            <td align="center">1</td>
-            <td>M Ula Irsyad</td>
-            <td align="center">13182420013</td>
-            <td align="center">Informatika</td>
-            <td align="center">ulacsm@gmail.com</td>
-            <td align="center">08927642289</td>
-            <td align="center"><img src="assets/images/Saga.webp" width="70 px"></td>  
-            <td><a href="editdata.php"><button>EDIT</button></a> <a href="deletedata.php"><button>DELETE</button></a></td> 
+            <td align="center"><?php $i ?></td>
+            <td><?php echo $mhs["nama"] ?></td>
+            <td align="center"><?php echo $mhs["nim"] ?></td>
+            <td align="center"><?php echo $mhs["jurusan"] ?></td>
+            <td align="center"><?php echo $mhs["email"] ?></td>
+            <td align="center"><?php echo $mhs["no_hp"] ?></td>
+            <td align="center"><img src="assets/images/<?php echo $mhs["foto"] ?> width="70 px"></td>  
+            <td>
+                <button class="btn-edit">EDIT</button>
+                <button class="btn-edit">DELETE</button>
+            <td>
         </tr>
-
-    </table>
-        <h3>Latihan</h3>
-        <table border="1" cellspacing="0" cellpadding="10px">
-        <tr>
-            <th>1,1</th>
-            <th>1,2</th>
-            <th>1,3</th>
-            <th>1,4</th>
-        </tr>
-
-        <tr>
-            <th>2,1</th>
-            <th  colspan="2" align="center">?</th>
-            <th>2,4</th>
-        </tr>
-
-        <tr>
-            <th>3,1</th>
-            <th>3,4</th>
-        </tr>
-
-        <tr>
-            <th>4,1</th>
-            <th>4,2</th>
-            <th>4,3</th>
-            <th>4,4</th>
-        </tr>
-    </table>
-
+        <?php 
+            $i++;
+            }       
+        ?>
 
 </body>
 </html>
