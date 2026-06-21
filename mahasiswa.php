@@ -1,33 +1,10 @@
 <?php
-
-    $koneksi = mysqli_connect("localhost", "root", "root", "ifrizkiweekly");
-
-    //if($koneksi)
-    //{
-    //    echo "Berhasil Konek";
-    //}
-
-
-    $query = "SELECT * FROM mahasiswa";
-
-    $result = mysqli_query($koneksi, $query);
-
-    //// ambil data (fetch) mahasiswa dari lemari (result)
-
-
-    // ada 4 cara 
-    //-----------------------
-
-    //// mysqli_fetch_row
-    //// mysqli_fetch_assoc
-    //// mysqli_fetch_object
-    //// mysqli_fetch_array
     
-    //while ($mhs = mysqli_fetch_assoc($result));
-    //{
-    //    var_dump($mhs);
-    //}
+    require 'fungsi.php';
+    $qmahasiswa = "SELECT * FROM mahasiswa";
+    $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahasiswa
 
+    
 
 ?>
 
@@ -75,7 +52,7 @@
         </tr>
         <?php 
             $i = 1;
-            while($mhs = mysqli_fetch_assoc($result));
+            foreach($mahasiswas as $mhs)
             {
         ?>
         <tr>
