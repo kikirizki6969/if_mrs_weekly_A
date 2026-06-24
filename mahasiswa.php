@@ -8,8 +8,6 @@
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,11 +60,10 @@
             <td align="center"><?php echo $mhs["jurusan"] ?></td>
             <td align="center"><?php echo $mhs["email"] ?></td>
             <td align="center"><?php echo $mhs["no_hp"] ?></td>
-            <td align="center"><img src="assets/images/<?php echo $mhs["foto"] ?> width="70 px"></td>  
-            <td>
-                <button class="btn-edit">EDIT</button>
-                <button class="btn-edit">DELETE</button>
-            <td>
+            <td align="center"><img src="asset/images/<?= $mhs["foto"]?>" width="70px" /></td>
+            <td><a href="editdata.php?id=<?= $mhs["id"] ?>"><button>EDIT</button></a>  
+                <a href ="deletedata.php?id=<?= $mhs["id"] ?>" onclick="return confirm('Yakinnnn?')"><button>DELETE</button></a>
+            </td>
         </tr>
         <?php 
             $i++;
