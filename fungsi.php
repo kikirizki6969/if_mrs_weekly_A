@@ -88,5 +88,20 @@
         
     }
 
+    function register($data)
+    {
+        $username = stripslashes($data["username"]); ///dijadikan kecil semua
+        $passsword1 = mysqli_real_escape_string($koneksi, $data["password1"]);
+        $passsword2 = mysqli_real_escape_string($koneksi, $data["password2"]);
+
+        if($passsword1 != $passsword2)
+        {
+            echo "<script>
+                alert('konfirmasi ulang password tidak sesuai');
+            </script>";
+            return false;
+        }
+    }
+
 
 ?>
